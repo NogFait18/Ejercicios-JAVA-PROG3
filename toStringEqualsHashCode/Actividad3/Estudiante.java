@@ -1,9 +1,10 @@
-package toStringEqualsHashCode.Actividad2;
-public class Estudiante extends Persona{
+package toStringEqualsHashCode.Actividad3;
+
+public class Estudiante  extends Persona {
     private String carrera;
 
     public Estudiante(String nombre, int edad, String carrera) {
-        super(nombre, edad); // Llamada al constructor de Persona
+        super(nombre, edad);
         this.carrera = carrera;
     }
 
@@ -17,9 +18,11 @@ public class Estudiante extends Persona{
 
     @Override
     public String toString() {
-        return "Estudiante{" +
-                getNombre()+getEdad()+
-                "carrera='" + carrera + '\'' +
+        return "\nEstudiante{" +
+                "\nNombre: "+getNombre()+
+                "\nEdad: "+getEdad()+
+                "\nCarrera: '" + carrera + '\'' +
                 '}';
     }
 }
+
