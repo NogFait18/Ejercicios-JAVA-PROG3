@@ -1,10 +1,9 @@
-package toStringEqualsHashCode.Actividad4;
+package toStringEqualsHashCode.Actividad5;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-
-class Producto {
+public class Producto {
     private int codigo;
     private String nombre;
     private int precio;
@@ -19,17 +18,17 @@ class Producto {
     public String getNombre() { return nombre; }
     public int getPrecio() { return precio; }
 
+
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof Producto)) return false;
-        Producto p = (Producto) obj;
-        return this.codigo == p.codigo; // Solo compara código
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Producto producto)) return false;
+        return codigo == producto.codigo && precio == producto.precio && Objects.equals(nombre, producto.nombre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(codigo); // Consistente con equals()
+        return Objects.hash(codigo, nombre, precio);
     }
 
     @Override
@@ -37,3 +36,4 @@ class Producto {
         return "Producto{" + "codigo=" + codigo + ", nombre='" + nombre + '\'' + ", precio=" + precio + '}';
     }
 }
+

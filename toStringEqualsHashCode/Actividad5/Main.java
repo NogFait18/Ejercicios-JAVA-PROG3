@@ -1,24 +1,20 @@
 package toStringEqualsHashCode.Actividad5;
 
-import toStringEqualsHashCode.Actividad4.Producto;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Map<Producto, Integer> inventario = new HashMap<>();
+        Set<Producto> productos = new HashSet<>();
 
-        Producto p1 = new Producto(1, "Hamburguesa", 500);
-        Producto p2 = new Producto(2, "Pizza", 800);
-        Producto p3 = new Producto(1, "Hamburguesa", 500); // Mismo que p1
+        productos.add(new Producto(1, "Hamburguesa", 500));
+        productos.add(new Producto(2, "Pizza", 800));
+        productos.add(new Producto(1, "Hamburguesa Doble", 600)); // Duplicado según código
 
-        inventario.put(p1, 10); // 10 unidades
-        inventario.put(p2, 5);  // 5 unidades
-        inventario.put(p3, 20); // Reemplaza a p1 porque son iguales
-
-        // Mostrar inventario
-        inventario.forEach((producto, cantidad) ->
-                System.out.println(producto + " -> " + cantidad + " unidades")
-        );
+        System.out.println("Productos en HashSet:");
+        productos.forEach(System.out::println);
     }
 }
+
+
