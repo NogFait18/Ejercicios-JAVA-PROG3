@@ -1,4 +1,4 @@
-package colecciones.Actividad1;
+package colecciones.Actividad2;
 
 import java.util.ArrayList;
 import java.util.List;

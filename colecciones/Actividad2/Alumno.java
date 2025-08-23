@@ -1,4 +1,4 @@
-package colecciones.Actividad1;
+package colecciones.Actividad2;
 
 public class Alumno {
     public String nombre;
