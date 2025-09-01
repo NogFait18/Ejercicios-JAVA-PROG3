@@ -1,4 +1,4 @@
-package Lombok.Actividad1;
+package lombok.Actividad1;
 
 
 public class Main {

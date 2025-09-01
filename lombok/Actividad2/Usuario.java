@@ -1,4 +1,4 @@
-package Lombok.Actividad2;
+package lombok.Actividad2;
 
 import lombok.Builder;
 import lombok.Data;
